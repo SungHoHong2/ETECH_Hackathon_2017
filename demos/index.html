@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        $(document).ready(function(){
+            var socket = io.connect();
+            var $messageForm = $('#send-message');
+            var $messageBox = $('#message');
+            var $chat = $('#chat');
+
+            $messageForm.submit(function(e){
+              e.preventDefault();
+              socket.emit('send message', $messageBox.val());
+              $messageBox.val('');
+            })
+
+            socket.on('new message', function(data){
+                  $chat.append(data+'<br/>');
+            });
+
+            $('#request_btn').click(function(){
+                  socket.emit('request connected', 'howdy');
+            });
+
+            socket.on('get connected', function(data){
+                  console.log(data);
+                  // $('#current_users').empty()
+                  // $(data).each(function(index, item){
+                  //       $('#current_users').append($('<li/>').text(item));
+                  // });
+            });
+
+        });
+    </script>
+
+</head>
+<body>
+
+      <h1>Completed Socket Communication</h1>
+      <td class="td-style"><a href="/demos/Audio+Video+TextChat+FileSharing.html" class="td-style2">Audio+Video+Chat+Fileshare</a></td>
+      <br>
+      <td class="td-style"><a href="/demos/TextChat+FileSharing.html" class="td-style2">Chat+Fileshare</a></td>
+      <br>
+      <h1>Experiments</h1>
+      <div id="chat"></div>
+      <form id="send-message">
+        <input type="text" id="message">
+        <input type="submit">
+      </form>
+      <ul id='current_users'>
+
+      </ul>
+      <button id='request_btn'> request </button>
+
+</body>
+</html>
