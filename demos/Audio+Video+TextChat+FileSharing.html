@@ -158,9 +158,14 @@
 
             document.getElementById('open-room').onclick = function() {
                 disableInputButtons();
-                connection.open(document.getElementById('room-id').value, function() {
-                    showRoomURL(connection.sessionid);
-                });
+
+                connection.open(document.getElementById('room-id').value, true);
+                showRoomURL(connection.sessionid);
+
+//                connection.open(document.getElementById('room-id').value, function() {
+//                    showRoomURL(connection.sessionid);
+//                    return true;
+//                });
             };
 
             document.getElementById('join-room').onclick = function() {
