@@ -94,6 +94,7 @@ function serverHandler(request, response) {
         }
 
 
+
         fs.readFile(filename, 'utf8', function(err, file) {
             if (err) {
                 response.writeHead(500, {
@@ -108,6 +109,8 @@ function serverHandler(request, response) {
             response.write(file, 'utf8');
             response.end();
         });
+
+
     } catch (e) {
         response.writeHead(404, {
             'Content-Type': 'text/plain'

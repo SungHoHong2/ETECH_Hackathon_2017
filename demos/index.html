@@ -23,27 +23,29 @@
             var connection = new RTCMultiConnection();
             connection.socketURL = '/';
 
-            console.log("start");
+            var video_user_id = false;
+            $('#image_on_off').click(function(){
+                    if(video_user_id) {
+                        location.href = "http://localhost:9001/demos/Audio+Video+TextChat+FileSharing.html#"+video_user_id;
+                    }
+            });
 
             (function looper() {
                 connection.getPublicModerators(function(array) {
-                    //$('.dynamic_a_tag').remove();
 
-                    console.log("running");
-                    console.log(array);
+                    console.log(array.length);
 
-                    array.forEach(function(moderator) {
+                    if(array.length>0) {
+                        video_user_id = array[0].userid;
+                        $('#image_on_off').attr("src","http://postfiles15.naver.net/MjAxNzAzMjRfMTQ2/MDAxNDkwMzQyMjA0NDY2.iZjsxam2e_rwT-cLNi4PhvIPr9u21NBrUjYq45RAyCIg.z7UJlVKoTQxF_ZbFWNJwMo06S4N8eVU1lfAbS5bcAv8g.GIF.maverickjin8/on_image.gif?type=w2");
+                    } else {
+                        video_user_id = false;
+                        $('#image_on_off').attr("src","http://postfiles14.naver.net/MjAxNzAzMjRfNjAg/MDAxNDkwMzQyMjAzNzcy.p6o26o1IKFyM95XSG3MAZKb5LXhXf0R8o9OicB-9xHkg.wJ0v2GB5nhIjDqbdzhGawHDEVO3IotXMwuqhPAW88FQg.PNG.maverickjin8/off_image.png?type=w2");
+                    }
 
-                        console.log("new chat room has begun!" + moderator.userid);
-
-                    });
                     setTimeout(looper, 3000);
                 });
             })();
-
-
-
-
         });
     </script>
 
@@ -158,9 +160,8 @@
         </div>
         <div class="col_2of3">
         <article class="box post">
-
             <div class="image">
-            <img src="off_image.png" />
+            <img id="image_on_off" href="/" src="http://postfiles14.naver.net/MjAxNzAzMjRfNjAg/MDAxNDkwMzQyMjAzNzcy.p6o26o1IKFyM95XSG3MAZKb5LXhXf0R8o9OicB-9xHkg.wJ0v2GB5nhIjDqbdzhGawHDEVO3IotXMwuqhPAW88FQg.PNG.maverickjin8/off_image.png?type=w2" />
         </div>
         <div class="details">
         <h2>Amsterdan</h2>
@@ -208,73 +209,3 @@
 </div>
 </body>
 </html>
-
-
-
-
-<!--<!doctype html>-->
-<!--<html lang="en">-->
-<!--<head>-->
-    <!--<meta charset="UTF-8">-->
-    <!--<meta name="viewport"-->
-          <!--content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
-    <!--<meta http-equiv="X-UA-Compatible" content="ie=edge">-->
-    <!--<title>Document</title>-->
-    <!--<script src="https://code.jquery.com/jquery-latest.min.js"></script>-->
-
-    <!--<script src="/dist/RTCMultiConnection.min.js"></script>-->
-    <!--<script src="/socket.io/socket.io.js"></script>-->
-    <!--<script>-->
-        <!--$(document).ready(function(){-->
-
-            <!--var connection = new RTCMultiConnection();-->
-            <!--connection.socketURL = '/';-->
-
-            <!--console.log("start");-->
-
-            <!--(function looper() {-->
-                <!--connection.getPublicModerators(function(array) {-->
-                    <!--//$('.dynamic_a_tag').remove();-->
-
-                    <!--console.log("running");-->
-                    <!--console.log(array);-->
-
-                    <!--array.forEach(function(moderator) {-->
-
-<!--//                        if($('a[id='+moderator.userid+']').length!=0) return;-->
-<!--//                        if(moderator.userid == connection.userid) return;-->
-
-                        <!--console.log("new chat room has begun!" + moderator.userid);-->
-
-                    <!--});-->
-                    <!--setTimeout(looper, 3000);-->
-                <!--});-->
-            <!--})();-->
-
-
-
-
-        <!--});-->
-    <!--</script>-->
-
-<!--</head>-->
-<!--<body>-->
-
-      <!--<h1>Completed Socket Communication</h1>-->
-      <!--<td class="td-style"><a href="/demos/Audio+Video+TextChat+FileSharing.html" class="td-style2">Audio+Video+Chat+Fileshare</a></td>-->
-      <!--<br>-->
-      <!--<td class="td-style"><a href="/demos/TextChat+FileSharing.html" class="td-style2">Chat+Fileshare</a></td>-->
-      <!--<br>-->
-      <!--<h1>Experiments</h1>-->
-      <!--<div id="chat"></div>-->
-      <!--<form id="send-message">-->
-        <!--<input type="text" id="message">-->
-        <!--<input type="submit">-->
-      <!--</form>-->
-      <!--<ul id='current_users'>-->
-
-      <!--</ul>-->
-      <!--<button id='request_btn'> request </button>-->
-
-<!--</body>-->
-<!--</html>-->

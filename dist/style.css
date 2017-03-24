@@ -1,3 +1,16 @@
+#marker, #saveMarker{
+  display: none;
+}
+
+
+#videos-container {
+  display: none;
+}
+
+#btn_hidden{
+  visibility: hidden;
+}
+
 *, *:before, *:after {
   box-sizing: border-box;
 }
