@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5591b054-7345-43cf-bca0-8c2f2eddc0c3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/off_image.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/on_image.gif" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demos/Audio+Video+TextChat+FileSharing.html" afterPath="$PROJECT_DIR$/demos/Audio+Video+TextChat+FileSharing.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demos/index.html" afterPath="$PROJECT_DIR$/demos/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/style.css" afterPath="$PROJECT_DIR$/dist/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
     </list>
     <ignored path="RTCMultiConnection_second.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,8 +25,8 @@
       <file leaf-file-name="Audio+Video+TextChat+FileSharing.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demos/Audio+Video+TextChat+FileSharing.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="169" column="11" lean-forward="true" selection-start-line="169" selection-start-column="11" selection-end-line="169" selection-end-column="11" />
+            <state relative-caret-position="785">
+              <caret line="425" column="29" lean-forward="true" selection-start-line="425" selection-start-column="29" selection-end-line="425" selection-end-column="29" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#article#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -53,8 +47,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/demos/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1393">
-              <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+            <state relative-caret-position="266">
+              <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -64,7 +58,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>404 not</find>
       <find>MultiRTC</find>
       <find>userid</find>
       <find>videos-container</find>
@@ -92,6 +85,9 @@
       <find>message_image</find>
       <find>details</find>
       <find>view on maps</find>
+      <find>click</find>
+      <find>location.href</find>
+      <find>image_on_off</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -106,9 +102,9 @@
         <option value="$PROJECT_DIR$/demos/test_UI.html" />
         <option value="$PROJECT_DIR$/demos/index_2.html" />
         <option value="$PROJECT_DIR$/server.js" />
-        <option value="$PROJECT_DIR$/demos/index.html" />
         <option value="$PROJECT_DIR$/dist/style.css" />
         <option value="$PROJECT_DIR$/demos/Audio+Video+TextChat+FileSharing.html" />
+        <option value="$PROJECT_DIR$/demos/index.html" />
       </list>
     </option>
   </component>
@@ -122,7 +118,7 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1093" />
+    <option name="x" value="1148" />
     <option name="y" value="23" />
     <option name="width" value="1403" />
     <option name="height" value="1325" />
@@ -297,15 +293,15 @@
       <option name="presentableId" value="Default" />
       <updated>1480938314399</updated>
       <workItem from="1490247136128" duration="12717000" />
-      <workItem from="1490328943770" duration="11459000" />
+      <workItem from="1490328943770" duration="11630000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24176000" />
+    <option name="totallyTimeSpent" value="24347000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1093" y="23" width="1403" height="1325" extended-state="0" />
+    <frame x="1148" y="23" width="1403" height="1325" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25659302" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -575,8 +571,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/demos/Audio+Video+TextChat+FileSharing.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="169" column="11" lean-forward="true" selection-start-line="169" selection-start-column="11" selection-end-line="169" selection-end-column="11" />
+        <state relative-caret-position="785">
+          <caret line="425" column="29" lean-forward="true" selection-start-line="425" selection-start-column="29" selection-end-line="425" selection-end-column="29" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#article#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -585,8 +581,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/demos/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1393">
-          <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+        <state relative-caret-position="266">
+          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding />
         </state>
       </provider>
