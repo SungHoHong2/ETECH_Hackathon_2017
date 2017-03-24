@@ -198,16 +198,13 @@
     // .......................UI Code........................
     // ......................................................
 
+    var open_host = false;
     document.getElementById('open-room').onclick = function() {
         disableInputButtons();
-
+        open_host = true;
         connection.open(document.getElementById('room-id').value, true);
         showRoomURL(connection.sessionid);
 
-//                connection.open(document.getElementById('room-id').value, function() {
-//                    showRoomURL(connection.sessionid);
-//                    return true;
-//                });
     };
 
     document.getElementById('join-room').onclick = function() {
@@ -303,7 +300,7 @@
     connection.videosContainer = document.getElementById('videos-container');
     connection.onstream = function(event) {
 
-        if(connection.userid != event.userid) {
+        if(connection.userid != event.userid && !open_host ) {
 
             var width = parseInt(connection.videosContainer.clientWidth / 2) - 20;
             var mediaElement = getMediaElement(event.mediaElement, {
@@ -324,6 +321,17 @@
             setTimeout(run_camera, 3000);
 
         }
+
+        if(open_host){
+            document.getElementsByClassName("container")[0].style.backgroundImage = "url(https://d13yacurqjgara.cloudfront.net/users/25514/screenshots/2016747/flat-news-app-icon-design-ramotion.gif)";
+            document.getElementsByClassName("container")[0].style.backgroundRepeat = "no-repeat";
+
+            document.getElementsByTagName("body")[0].style.backgroundColor = "#ffc341";
+            document.getElementsByClassName("grid_4")[0].style.visibility = "hidden";
+            document.getElementsByClassName("grid_8")[0].style.visibility = "hidden";
+
+        }
+
     };
 
     connection.onstreamended = function(event) {
