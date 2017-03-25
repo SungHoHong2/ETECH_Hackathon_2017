@@ -7,7 +7,6 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>EmergTech Hackathon Example</title>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel='stylesheet prefetch' href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/6035/grid.css'>
     <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Montserrat'>
@@ -19,6 +18,24 @@
     <script src="/socket.io/socket.io.js"></script>
     <script>
         $(document).ready(function(){
+
+            for(var i=2; i<6; i++){
+                $('#select_'+i).css('display','none');
+            }
+
+            var display_num = 2;
+            $('.btn-primary').click(function(){
+                if(display_num<6) {
+                    $('#select_' + display_num).css('display', '');
+                    display_num++;
+                }
+            });
+
+            $('#cheat_btn').click(function(){
+                for(var i=2; i<6; i++){
+                    $('#select_'+i).css('display','');
+                }
+            });
 
             var connection = new RTCMultiConnection();
             connection.socketURL = '/';
@@ -37,10 +54,10 @@
 
                     if(array.length>0) {
                         video_user_id = array[0].userid;
-                        $('#image_on_off').attr("src","http://postfiles15.naver.net/MjAxNzAzMjRfMTQ2/MDAxNDkwMzQyMjA0NDY2.iZjsxam2e_rwT-cLNi4PhvIPr9u21NBrUjYq45RAyCIg.z7UJlVKoTQxF_ZbFWNJwMo06S4N8eVU1lfAbS5bcAv8g.GIF.maverickjin8/on_image.gif?type=w2");
+                        $('#image_on_off').attr("src","https://api-project-133104497638.appspot.com/templates/css/5c8ef668081938dfa0d05fd37a8ea488.gif");
                     } else {
                         video_user_id = false;
-                        $('#image_on_off').attr("src","http://postfiles14.naver.net/MjAxNzAzMjRfNjAg/MDAxNDkwMzQyMjAzNzcy.p6o26o1IKFyM95XSG3MAZKb5LXhXf0R8o9OicB-9xHkg.wJ0v2GB5nhIjDqbdzhGawHDEVO3IotXMwuqhPAW88FQg.PNG.maverickjin8/off_image.png?type=w2");
+                        $('#image_on_off').attr("src","https://api-project-133104497638.appspot.com/templates/css/5c8ef668081938dfa0d05fd37a8ea488_2.jpg");
                     }
 
                     setTimeout(looper, 3000);
@@ -58,58 +75,13 @@
     <div class="grid_4">
         <section class="box widget locations">
             <div class="avatar">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/6035/scrtpxls_location.png"  />
+                <img style="height: 192px; width: 189px;" src="https://api-project-133104497638.appspot.com/templates/css/giraffe_pic.jpg"  />
             </div>
             <div class="details">
-                <h2>De Westerkerk</h2>
-                <p>Prinsengracht 281</p>
+                <h2>PickleJar</h2>
+                <p>Project Giraffe</p>
                 <a href="#" class="btn btn-primary btn-block btn-large">view on maps</a>
             </div>
-        </section>
-        <section class="box widget calendar">
-            <header class="header">
-                <h2>Saturday</h2>
-                <p><span class="icon-arrow-left"></span>January<span class="icon-arrow-right"></span></p>
-            </header>
-            <article class="days">
-                <ul>
-                    <li class="previous">30</li>
-                    <li class="previous">31</li>
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
-                    <li>6</li>
-                    <li>7</li>
-                    <li>8</li>
-                    <li>9</li>
-                    <li>10</li>
-                    <li>11</li>
-                    <li>12</li>
-                    <li>13</li>
-                    <li>14</li>
-                    <li>15</li>
-                    <li>16</li>
-                    <li>17</li>
-                    <li>18</li>
-                    <li>19</li>
-                    <li>20</li>
-                    <li>21</li>
-                    <li>22</li>
-                    <li>23</li>
-                    <li>24</li>
-                    <li>25</li>
-                    <li>26</li>
-                    <li>27</li>
-                    <li>28</li>
-                    <li>29</li>
-                    <li>30</li>
-                    <li>31</li>
-                    <li class="next">1</li>
-                    <li class="next">2</li>
-                </ul>
-            </article>
         </section>
     </div>
     <div class="grid_8">
@@ -134,7 +106,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a id="cheat_btn">
                         <span class="icon-cog"></span><br />
                         <span class="title">Settings</span>
                     </a>
@@ -142,44 +114,26 @@
             </ul>
         </nav>
 
+        <div class="grid_8" id="select_1">
+        <section class="box widget find" style="padding-bottom: 40px; margin-left: -10px; margin-right: 11px;">
+        <input style="width :70%; float: left;" type="text" name="find" placeholder="City zip code" />
+        <a style="width: 28%; height:30px; float: left; padding-top: 8px; margin-left: 9px;" class="btn btn-primary btn-large btn-block">Search</a>
+        </section>
+        </div>
 
-        <div class="inner_container">
-        <div class="col_1of3">
-        <section class="box widget video">
-        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/6035/scrtpxls_video.png" alt="" />
-        </section>
-        <section class="box widget weather">
-        <header class="header">
-        <div class="temp">10&#176; <span class="icon-brightness-half"></span></div>
-        <span class="icon-partlycloudy"></span>
-        </header>
-        <article>
-        <h2>Saturday 16 January</h2>
-        </article>
-        </section>
+
+        <div class="grid_8" id="select_2">
+        <section class="box widget audio" style="margin-right: 12px; margin-left: -8px;">
+        <div class="image" style="width: 107px; padding-left: 11px; padding-top: 11px;">
+        <img src="https://api-project-133104497638.appspot.com/templates/css/location-marker-flat.png"/>
         </div>
-        <div class="col_2of3">
-        <article class="box post">
-            <div class="image">
-            <img id="image_on_off" href="/" src="http://postfiles14.naver.net/MjAxNzAzMjRfNjAg/MDAxNDkwMzQyMjAzNzcy.p6o26o1IKFyM95XSG3MAZKb5LXhXf0R8o9OicB-9xHkg.wJ0v2GB5nhIjDqbdzhGawHDEVO3IotXMwuqhPAW88FQg.PNG.maverickjin8/off_image.png?type=w2" />
-        </div>
+
         <div class="details">
-        <h2>Amsterdan</h2>
-        <p>Amsterdam is the capital city of and the most populous within the Kingdom of the Netherlands. Amsterdam's name derives from Amstelredamme. Amsterdam is located in the western... Netherlands</p>
-        </div>
-        </article>
-        </div>
-        <div class="col_2of3">
-        <section class="box widget audio">
-        <div class="image">
-        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/6035/scrtpxls_audio.png" />
-        </div>
-        <div class="details">
-        <h2 class="album">Geef mij maar Amsterdam</h2>
-        <p class="artist">Johnny Jordaan</p>
+        <h2 class="album">Radius</h2>
+        <p class="artist">Select the radius of your future home </p>
         <div class="player">
         <div class="bar">
-        <div class="progress" data-time="1:45"></div>
+        <div class="progress" data-time="2:45"></div>
         </div>
         <div class="actions">
         <a href="#" class="btn"><span class="icon-arrow-left"></span></a>
@@ -190,17 +144,53 @@
         </div>
         </section>
         </div>
-        <div class="col_1of3">
-        <section class="box widget find">
-        <input type="text" name="find" placeholder="Find your city place" />
-        <label for="favorite" class="checkbox">
-        <input type="checkbox" id="favorite" name="favorite" />
-        Add to favorites
-        </label>
-        <a href="#" class="btn btn-primary btn-large btn-block">Search</a>
+
+
+        <div class="grid_8" id="select_3">
+        <section class="box widget audio" style="margin-right: 12px; margin-left: -8px;">
+        <div class="image" style="width: 107px; padding-left: 11px; padding-top: 11px;">
+        <img src="https://api-project-133104497638.appspot.com/templates/css/price-icon-22.png" />
+        </div>
+        <div class="details">
+        <h2 class="album">Price Range</h2>
+        <p class="artist">Select the price of your future home </p>
+        <div class="player">
+        <div class="bar">
+        <div class="progress" data-time="2:45"></div>
+        </div>
+        <div class="actions">
+        <a href="#" class="btn"><span class="icon-arrow-left"></span></a>
+        <a href="#" class="btn btn-primary"><span class="icon-pause"></span></a>
+        <a href="#" class="btn"><span class="icon-arrow-right"></span></a>
+        </div>
+        </div>
+        </div>
         </section>
         </div>
+
+
+
+       <div class="grid_8" id="select_4">
+        <article class="box post" style="margin-left: -8px; margin-right: 12px;">
+            <div class="image" style="padding: 33px;">
+            <img href="/" src="https://api-project-133104497638.appspot.com/templates/css/RoomSketcher-3-Bedroom-Floor-Plans-2217219.jpg" />
         </div>
+        <div class="details">
+        <h2>Floor Plans</h2>
+        <p>Aderives from Amstelredamme. Amsterdam is located in the western... Netherlands</p>
+        <a style="width: 28%; height:30px; float: left; padding-top: 8px; margin-left: 85px; margin-top: -64px;" class="btn btn-primary btn-large btn-block">Search</a>
+        </div>
+        </article>
+        </div>
+
+
+        <div class="grid_8" id="select_5">
+        <section class="box widget video" style="margin-left: -8px; margin-right: 12px;">
+        <img id="image_on_off"  style="width:100%;" href="/" src="https://api-project-133104497638.appspot.com/templates/css/5c8ef668081938dfa0d05fd37a8ea488_2.jpg" />
+        </section>
+        </div>
+
+
         </div>
         </div>
 

@@ -8,11 +8,52 @@
     <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Montserrat'>
     <link rel='stylesheet prefetch' href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/6035/icomoon-scrtpxls.css'>
     <link rel="stylesheet" href="/dist/style.css">
-
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script src="/dist/polyfill.js" ></script>
     <script src="/dist/cv.js" ></script>
 
     <script>
+
+        $(document).ready(function(){
+
+            $('.running_btn').hover(function(){
+
+            $.ajax({
+                url: 'https://api-project-133104497638.appspot.com/move_top?command='+$(this).attr('id'),
+                type: "GET",
+                xhrFields: {
+                    withCredentials: false
+                },
+
+                success: function (data, textStatus, jqXHR) {
+                    console.log('good start');
+
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    alert('Error!');
+                }
+            });
+
+
+            }, function(){
+
+                $.ajax({
+                url: 'https://api-project-133104497638.appspot.com/move_top?command='+$(this).attr('id'),
+                type: "GET",
+                success: function (data, textStatus, jqXHR) {
+                    console.log('good end');
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    alert('Error!');
+                }
+            });
+
+
+            });
+
+
+
+        });
 
 
     </script>
@@ -24,12 +65,11 @@
     <div class="grid_4">
         <section class="box widget locations">
             <div class="avatar">
-                <img id="message_image" width="234px" height="234px" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/6035/scrtpxls_location.png"  />
+                <img id="profile_image" style="height :236px" src="https://api-project-133104497638.appspot.com/templates/css/5d1121840bae6c57_8463-w500-h400-b0-p0--modern-living-room.jpg"  />
             </div>
             <div class="details">
                 <h2 id="message_title">De Westerkerk</h2>
                 <p id="message_detail">Prinsengracht 281</p>
-                <a href="#" class="btn btn-primary btn-block btn-large">request for more info</a>
             </div>
         </section>
         <section class="box widget calendar">
@@ -37,50 +77,22 @@
                 <h2>Controller</h2>
             </header>
             <article class="days">
-                <img id="btn_hidden" src="http://postfiles9.naver.net/MjAxNzAzMjVfMjY4/MDAxNDkwMzc1OTg5OTIz.VMPJPMDP0h-agPYmDKuH2TS4B9VQHQYu2uFj1mcfG5gg.rtMcsh-K6wA2cBmaX3-uonXQft8k-7MpzTgsK95PQRcg.PNG.maverickjin8/button_1.png?type=w2" alt="">
+                <img id="btn_hidden" src="https://api-project-133104497638.appspot.com/templates/css/button_1.png" alt="">
 
-                <img id="btn_top" src="http://postfiles7.naver.net/MjAxNzAzMjVfMTQ2/MDAxNDkwMzc1OTkxMTU5.iP2mJvB5AGi6uT45wVWMFfmznw3hGUeggQk07-MLpjsg.EH_hNRLQ7ghxwWgh2hNKPROaJv-2eMcncvYdRmMRPGgg.PNG.maverickjin8/button_4.png?type=w2" alt="">
-                <img id="btn_hidden" src="http://postfiles4.naver.net/MjAxNzAzMjVfMjI2/MDAxNDkwMzc1OTkwNzU1.rj1AnZVdCLte94IZpXbfAsmumvARBsbbtLex46T9Jn0g.h2JL3IlEsBYs5ibhbhT25LzxVpUydlS06mCg27wNiKwg.PNG.maverickjin8/button_3.png?type=w2" alt="">
+                <img id="w" class="running_btn" src="https://api-project-133104497638.appspot.com/templates/css/button_4.png" alt="">
+                <img id="btn_hidden" class="running_btn" src="https://api-project-133104497638.appspot.com/templates/css/button_3.png" alt="">
 
-                <img id="btn_left" src="http://postfiles9.naver.net/MjAxNzAzMjVfMjY4/MDAxNDkwMzc1OTg5OTIz.VMPJPMDP0h-agPYmDKuH2TS4B9VQHQYu2uFj1mcfG5gg.rtMcsh-K6wA2cBmaX3-uonXQft8k-7MpzTgsK95PQRcg.PNG.maverickjin8/button_1.png?type=w2" alt="">
-                <img id="btn_center" src="http://postfiles10.naver.net/MjAxNzAzMjVfMTQ1/MDAxNDkwMzc1OTkwMzA0.j8sUhZUyzyiTuK5zhiRreH-Sou9udvL1pl_cKL-qbo8g.Uo_zWvpD7O9J3fbLYlnxTgbhWzVtx0gr8AnTw7tpibgg.PNG.maverickjin8/button_2.png?type=w2" alt="">
-                <img id="btn_right" src="http://postfiles9.naver.net/MjAxNzAzMjVfMjY4/MDAxNDkwMzc1OTg5OTIz.VMPJPMDP0h-agPYmDKuH2TS4B9VQHQYu2uFj1mcfG5gg.rtMcsh-K6wA2cBmaX3-uonXQft8k-7MpzTgsK95PQRcg.PNG.maverickjin8/button_1.png?type=w2" alt="">
+                <img id="a" class="running_btn" src="https://api-project-133104497638.appspot.com/templates/css/button_1.png" alt="">
+                <img id="btn_center" src="https://api-project-133104497638.appspot.com/templates/css/button_2.png" alt="">
+                <img id="d" class="running_btn" src="https://api-project-133104497638.appspot.com/templates/css/button_1.png" alt="">
 
-                <img id="btn_hidden" src="http://postfiles9.naver.net/MjAxNzAzMjVfMjY4/MDAxNDkwMzc1OTg5OTIz.VMPJPMDP0h-agPYmDKuH2TS4B9VQHQYu2uFj1mcfG5gg.rtMcsh-K6wA2cBmaX3-uonXQft8k-7MpzTgsK95PQRcg.PNG.maverickjin8/button_1.png?type=w2" alt="">
-                <img id="btn_bottom" src="http://postfiles7.naver.net/MjAxNzAzMjVfMTQ2/MDAxNDkwMzc1OTkxMTU5.iP2mJvB5AGi6uT45wVWMFfmznw3hGUeggQk07-MLpjsg.EH_hNRLQ7ghxwWgh2hNKPROaJv-2eMcncvYdRmMRPGgg.PNG.maverickjin8/button_4.png?type=w2" alt="">
-                <img id="btn_hidden" src="http://postfiles9.naver.net/MjAxNzAzMjVfMjY4/MDAxNDkwMzc1OTg5OTIz.VMPJPMDP0h-agPYmDKuH2TS4B9VQHQYu2uFj1mcfG5gg.rtMcsh-K6wA2cBmaX3-uonXQft8k-7MpzTgsK95PQRcg.PNG.maverickjin8/button_1.png?type=w2" alt="">
+                <img id="btn_hidden" src="https://api-project-133104497638.appspot.com/templates/css/button_1.png" alt="">
+                <img id="s" class="running_btn" src="https://api-project-133104497638.appspot.com/templates/css/button_4.png" alt="">
+                <img id="btn_hidden" src="https://api-project-133104497638.appspot.com/templates/css/button_1.png" alt="">
             </article>
         </section>
     </div>
     <div class="grid_8">
-        <nav class="box nav">
-            <ul>
-                <li>
-                    <a href="#">
-                        <span class="icon-home"></span><br />
-                        <span class="title">Home</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <span class="icon-images"></span><br />
-                        <span class="title">Tour</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <span class="icon-bubble"></span><br />
-                        <span class="title">Ask</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <span class="icon-cog"></span><br />
-                        <span class="title">Settings</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
 
 
         <div class="inner_container">
@@ -97,7 +109,7 @@
                         <canvas id="marker" width='100' height='100' style="border:1px dotted grey;"></canvas>
                         <p><button id="saveMarker">save it</button></p>
                     </div>
-                    <div class="details">
+                    <div class="details" id="show_off_not_host">
                         <h2>Amsterdan</h2>
                         <div class="make-center">
                             <input type="text" id="room-id" value="abcdef">
@@ -114,6 +126,9 @@
                             <div id="room-urls" style="text-align: center;display: none;background: #F1EDED;margin: 15px -10px;border: 1px solid rgb(189, 189, 189);border-left: 0;border-right: 0;"></div>
                         </div>
                     </div>
+                      <div class="image">
+                          <img id="message_image" style="width:100%" src="https://api-project-133104497638.appspot.com/templates/css/floor_0.png"  />
+                        </div>
                 </article>
             </div>
         </div>
@@ -164,6 +179,9 @@
         drawMarker(0);
         drawMarker(1);
         drawMarker(2);
+        drawMarker(3);
+        drawMarker(4);
+
 
         document.getElementById('saveMarker').addEventListener("click", function () {
             window.open(marker.toDataURL('image/png'));
@@ -330,6 +348,8 @@
             document.getElementsByClassName("grid_4")[0].style.visibility = "hidden";
             document.getElementsByClassName("grid_8")[0].style.visibility = "hidden";
 
+        }else{
+            $('#show_off_not_host').hide();
         }
 
     };
@@ -460,16 +480,34 @@
 
             switch(markers[i].id){
                 case 0:
-                    text_message = 'Living Room';
-                    document.getElementById('message_title').innerHTML = "Living Room";
+                    text_message = 'Patio';
+                    document.getElementById('message_title').innerHTML = "Patio";
                     document.getElementById('message_detail').innerHTML = "Lovely Living Room with everything!";
-                    document.getElementById('message_image').setAttribute('src','http://postfiles2.naver.net/MjAxNzAzMjVfNjkg/MDAxNDkwMzkxNjcyMTY5.1EAyDb4Tvm8MrbKNk3_GVuvLGCuxz5VxFe3pvrqJ6QMg.hQw82BwTTxLaK6W65w1L6STDmsAvV4zicvi30qQXsr8g.JPEG.maverickjin8/5d1121840bae6c57_8463-w500-h400-b0-p0--modern-living-room.jpg?type=w2');
+                    document.getElementById('message_image').setAttribute('src','https://api-project-133104497638.appspot.com/templates/css/floor_1.png');
+                    break;
+                case 1:
+                    text_message = 'Bathroom';
+                    document.getElementById('message_title').innerHTML = "Bedroom";
+                    document.getElementById('message_detail').innerHTML = "Lovely Bath Room with everything!";
+                    document.getElementById('message_image').setAttribute('src','https://api-project-133104497638.appspot.com/templates/css/floor_2.png');
                     break;
                 case 2:
+                    text_message = 'Living Room';
+                    document.getElementById('message_title').innerHTML = "Bath";
+                    document.getElementById('message_detail').innerHTML = "Lovely Living Room with everything!";
+                    document.getElementById('message_image').setAttribute('src','https://api-project-133104497638.appspot.com/templates/css/floor_3.png');
+                    break;
+                case 3:
                     text_message = 'Bathroom';
-                    document.getElementById('message_title').innerHTML = "Bath Room";
+                    document.getElementById('message_title').innerHTML = "Kitchen";
                     document.getElementById('message_detail').innerHTML = "Lovely Bath Room with everything!";
-                    document.getElementById('message_image').setAttribute('src','http://postfiles14.naver.net/MjAxNzAzMjVfNjAg/MDAxNDkwMzkxNjcyNTY4.RH7-SQMhMtO3QC8p0_x1QVeK3-Rb_jM-odlIr4NwmNIg.jaS5CkGpmVxtSAfKAnbP684Q33Ko2oG7U0ZN77VjLAAg.JPEG.maverickjin8/dp15202_4col_All_Bathroom_Vanities.jpeg?type=w2');
+                    document.getElementById('message_image').setAttribute('src','https://api-project-133104497638.appspot.com/templates/css/floor_4.png');
+                    break;
+                case 4:
+                    text_message = 'Bathroom';
+                    document.getElementById('message_title').innerHTML = "Livingroom";
+                    document.getElementById('message_detail').innerHTML = "Lovely Bath Room with everything!";
+                    document.getElementById('message_image').setAttribute('src','https://api-project-133104497638.appspot.com/templates/css/floor_5.png');
                     break;
 
             }
