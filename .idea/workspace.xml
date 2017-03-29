@@ -2,41 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5591b054-7345-43cf-bca0-8c2f2eddc0c3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demos/Audio+Video+TextChat+FileSharing_2nd.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demos/MultiRTC/images/accepted.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demos/MultiRTC/images/action-needed.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demos/MultiRTC/images/cancel.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demos/MultiRTC/images/chat-message.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demos/MultiRTC/images/delete.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demos/MultiRTC/images/help.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demos/MultiRTC/images/info.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demos/MultiRTC/images/loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demos/MultiRTC/images/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demos/MultiRTC/images/microphone.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demos/MultiRTC/images/screen.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demos/MultiRTC/images/scrollbar_arrow_down.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demos/MultiRTC/images/scrollbar_arrow_left.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demos/MultiRTC/images/scrollbar_arrow_right.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demos/MultiRTC/images/scrollbar_arrow_up.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demos/MultiRTC/images/settings.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demos/MultiRTC/images/share-files.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demos/MultiRTC/images/user.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demos/MultiRTC/images/users.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demos/MultiRTC/images/webcam.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demos/MultiRTC/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demos/MultiRTC/linkify.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demos/MultiRTC/scrol-bars.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demos/MultiRTC/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demos/MultiRTC/ui.main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demos/MultiRTC/ui.peer-connection.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demos/MultiRTC/ui.settings.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demos/MultiRTC/ui.share-files.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demos/MultiRTC/ui.users-list.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demos/getPublicModerators.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demos/index_2.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demos/Audio+Video+TextChat+FileSharing.html" afterPath="$PROJECT_DIR$/demos/Audio+Video+TextChat+FileSharing.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demos/index.html" afterPath="$PROJECT_DIR$/demos/index.html" />
     </list>
     <ignored path="RTCMultiConnection_second.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,8 +25,8 @@
       <file leaf-file-name="Audio+Video+TextChat+FileSharing.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/demos/Audio+Video+TextChat+FileSharing.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="507" column="86" lean-forward="true" selection-start-line="507" selection-start-column="86" selection-end-line="507" selection-end-column="86" />
+            <state relative-caret-position="255">
+              <caret line="471" column="52" lean-forward="true" selection-start-line="471" selection-start-column="52" selection-end-line="471" selection-end-column="52" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#div#0;n#section#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#article#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -158,9 +124,10 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="95" />
     <option name="y" value="22" />
     <option name="width" value="1440" />
-    <option name="height" value="792" />
+    <option name="height" value="790" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -219,8 +186,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -490,7 +457,7 @@
     <option name="totallyTimeSpent" value="25937000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="792" extended-state="6" />
+    <frame x="95" y="22" width="1440" height="790" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1084,8 +1051,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/demos/Audio+Video+TextChat+FileSharing.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="507" column="86" lean-forward="true" selection-start-line="507" selection-start-column="86" selection-end-line="507" selection-end-column="86" />
+        <state relative-caret-position="255">
+          <caret line="471" column="52" lean-forward="true" selection-start-line="471" selection-start-column="52" selection-end-line="471" selection-end-column="52" />
           <folding>
             <element signature="n#style#0;n#img#0;n#div#0;n#section#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#article#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
