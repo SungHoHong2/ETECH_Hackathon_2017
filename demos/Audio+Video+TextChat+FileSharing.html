@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>EmergeTech Video Example</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet prefetch' href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/6035/grid.css'>
+    <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Montserrat'>
+    <link rel='stylesheet prefetch' href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/6035/icomoon-scrtpxls.css'>
+    <link rel="stylesheet" href="/dist/style.css">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/dist/polyfill.js" ></script>
+    <script src="/dist/cv.js" ></script>
+
+    <script>
+
+        $(document).ready(function(){
+
+<<<<<<< HEAD
+            $('#btn_center').click(function(){
+
+                $.ajax({
+                    url: 'https://api-project-133104497638.appspot.com/move_top?command=s',
+                    type: "GET",
+                    xhrFields: {
+                        withCredentials: false
+                    },
+
+                    success: function (data, textStatus, jqXHR) {
+                        console.log('emergency stop');
+
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        alert('Error!');
+                    }
+                });
+
+            });
+
+
+=======
+>>>>>>> faecd2e0e23c36a1ddde2a64a1b0cbfd424cc5f1
+            $('.running_btn').hover(function(){
+
+            $.ajax({
+                url: 'https://api-project-133104497638.appspot.com/move_top?command='+$(this).attr('id'),
+                type: "GET",
+                xhrFields: {
+                    withCredentials: false
+                },
+
+                success: function (data, textStatus, jqXHR) {
+                    console.log('good start');
+
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    alert('Error!');
+                }
+            });
+
+
+            }, function(){
+<<<<<<< HEAD
+=======
+
+>>>>>>> faecd2e0e23c36a1ddde2a64a1b0cbfd424cc5f1
+                $.ajax({
+                url: 'https://api-project-133104497638.appspot.com/move_top?command='+$(this).attr('id'),
+                type: "GET",
+                success: function (data, textStatus, jqXHR) {
+                    console.log('good end');
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    alert('Error!');
+                }
+            });
+
+
+            });
+
+
+
+        });
+
+
+    </script>
+
+</head>
+
+<body>
+<div class="container">
+    <div class="grid_4">
+        <section class="box widget locations">
+            <div class="avatar">
+                <img id="profile_image" style="height :236px" src="https://api-project-133104497638.appspot.com/templates/css/5d1121840bae6c57_8463-w500-h400-b0-p0--modern-living-room.jpg"  />
+            </div>
+            <div class="details">
+                <h2 id="message_title">De Westerkerk</h2>
+                <p id="message_detail">Prinsengracht 281</p>
+            </div>
+        </section>
+        <section class="box widget calendar">
+            <header class="header">
+<<<<<<< HEAD
+                <img id="q" class="running_btn" style="width: 50px; position: absolute; top: 430px; left:63px;" src="https://api-project-133104497638.appspot.com/templates/css/left.png" alt="">
+                <h2> Controller </h2>
+                <img id = "e" class="running_btn" style="width: 50px; " src="https://api-project-133104497638.appspot.com/templates/css/right.png" alt="">
+            </header>
+            <article class="days">
+                <img id="btn_hidden" src="https://api-project-133104497638.appspot.com/templates/css/button_2.png" alt="">
+
+                <img id="w" class="running_btn" src="https://api-project-133104497638.appspot.com/templates/css/button_4.png" alt="">
+                <img id="btn_hidden" class="running_btn" src="https://api-project-133104497638.appspot.com/templates/css/button_2.png" alt="">
+=======
+                <h2>Controller</h2>
+            </header>
+            <article class="days">
+                <img id="btn_hidden" src="https://api-project-133104497638.appspot.com/templates/css/button_1.png" alt="">
+
+                <img id="w" class="running_btn" src="https://api-project-133104497638.appspot.com/templates/css/button_4.png" alt="">
+                <img id="btn_hidden" class="running_btn" src="https://api-project-133104497638.appspot.com/templates/css/button_3.png" alt="">
+>>>>>>> faecd2e0e23c36a1ddde2a64a1b0cbfd424cc5f1
+
+                <img id="a" class="running_btn" src="https://api-project-133104497638.appspot.com/templates/css/button_1.png" alt="">
+                <img id="btn_center" src="https://api-project-133104497638.appspot.com/templates/css/button_2.png" alt="">
+                <img id="d" class="running_btn" src="https://api-project-133104497638.appspot.com/templates/css/button_1.png" alt="">
+
+                <img id="btn_hidden" src="https://api-project-133104497638.appspot.com/templates/css/button_1.png" alt="">
+                <img id="s" class="running_btn" src="https://api-project-133104497638.appspot.com/templates/css/button_4.png" alt="">
+                <img id="btn_hidden" src="https://api-project-133104497638.appspot.com/templates/css/button_1.png" alt="">
+            </article>
+        </section>
+    </div>
+    <div class="grid_8">
+
+
+        <div class="inner_container">
+            <div class="grid_8">
+                <article class="box post">
+                    <div class="image">
+                        <div id="chat-container">
+                            <div id="file-container"></div>
+                            <div class="chat-output"></div>
+                        </div>
+
+                        <div id="videos-container"></div>
+                        <canvas id="canvas"></canvas>
+                        <canvas id="marker" width='100' height='100' style="border:1px dotted grey;"></canvas>
+                        <p><button id="saveMarker">save it</button></p>
+                    </div>
+                    <div class="details" id="show_off_not_host">
+                        <h2>Amsterdan</h2>
+                        <div class="make-center">
+                            <input type="text" id="room-id" value="abcdef">
+                            <button id="open-room">Open Room</button>
+                            <button id="join-room">Join Room</button>
+                            <button id="open-or-join-room">Auto Open Or Join Room</button>
+
+                            <br><br>
+                            <input type="text" id="input-text-chat" placeholder="Enter Text Chat" disabled>
+                            <button id="share-file" disabled>Share File</button>
+                            <br><br>
+                            <button id="btn-leave-room" disabled>Leave /or close the room</button>
+
+                            <div id="room-urls" style="text-align: center;display: none;background: #F1EDED;margin: 15px -10px;border: 1px solid rgb(189, 189, 189);border-left: 0;border-right: 0;"></div>
+                        </div>
+                    </div>
+                      <div class="image">
+                          <img id="message_image" style="width:100%" src="https://api-project-133104497638.appspot.com/templates/css/floor_0.png"  />
+                        </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/dist/RTCMultiConnection.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/dist/getMediaElement.js"></script>
+<script src="/dist/FileBufferReader.js"></script>
+
+
+<script>
+    var scr = document.createElement("script");
+    scr.src = "/dist/pupil.js" + "?ts=" + new Date().getTime();
+    document.getElementsByTagName("head")[0].appendChild(scr);
+</script>
+
+<script>
+    var camera, canvas, context, imageData, pixels, detector, marker, markerContext;
+    var debugImage, warpImage, homographyImage, video;
+
+
+    function run_camera() {
+
+        camera = document.getElementsByTagName("video");
+        canvas = document.getElementById("canvas");
+        marker = document.getElementById("marker");
+        markerContext = marker.getContext("2d");
+        context = canvas.getContext("2d");
+
+        function drawMarker(id) {
+            var mat = AR.Marker.generate(id, 5);
+            var cellSize = marker.width / mat.length;
+            for (i = 0; i < mat.length; i++) {
+                for (j = 0; j < mat[i].length; j++) {
+                    markerContext.fillStyle = mat[j][i] == 0 ? "#000" : "#FFF";
+                    markerContext.fillRect(i * cellSize, j * cellSize, i * cellSize + cellSize, j * cellSize + cellSize);
+                }
+            }
+        }
+
+        marker.addEventListener("click", function () {
+            var id = parseInt(prompt("What marker ID would you like to generate?", ""));
+            drawMarker(id);
+        });
+
+        drawMarker(0);
+        drawMarker(1);
+        drawMarker(2);
+        drawMarker(3);
+        drawMarker(4);
+
+
+        document.getElementById('saveMarker').addEventListener("click", function () {
+            window.open(marker.toDataURL('image/png'));
+        });
+
+        camera.width = 620;
+        camera.height = 450;
+
+        canvas.width = parseInt(camera.width);
+        canvas.height = parseInt(camera.height);
+
+        navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+        if (navigator.getUserMedia) {
+
+            video = camera[0]
+            imageData = context.getImageData(0, 0, camera.width, camera.height);
+            pixels = [];
+            detector = new AR.Detector();
+
+            debugImage = context.createImageData(camera.width, camera.height);
+            warpImage = context.createImageData(49, 49);
+            homographyImage = new CV.Image();
+
+            requestAnimationFrame(tick);
+
+        }
+
+    }
+
+
+    // ......................................................
+    // .......................UI Code........................
+    // ......................................................
+
+    var open_host = false;
+    document.getElementById('open-room').onclick = function() {
+        disableInputButtons();
+        open_host = true;
+        connection.open(document.getElementById('room-id').value, true);
+        showRoomURL(connection.sessionid);
+
+    };
+
+    document.getElementById('join-room').onclick = function() {
+        disableInputButtons();
+        connection.join(document.getElementById('room-id').value);
+    };
+
+    document.getElementById('open-or-join-room').onclick = function() {
+        disableInputButtons();
+        connection.openOrJoin(document.getElementById('room-id').value, function(isRoomExists, roomid) {
+            if(!isRoomExists) {
+                showRoomURL(roomid);
+            }
+        });
+    };
+
+    document.getElementById('btn-leave-room').onclick = function() {
+        this.disabled = true;
+
+        if(connection.isInitiator) {
+            // use this method if you did NOT set "autoCloseEntireSession===true"
+            // for more info: https://github.com/muaz-khan/RTCMultiConnection#closeentiresession
+            connection.closeEntireSession(function() {
+                document.querySelector('h1').innerHTML = 'Entire session has been closed.';
+            });
+        }
+        else {
+            connection.leave();
+        }
+    };
+
+    // ......................................................
+    // ................FileSharing/TextChat Code.............
+    // ......................................................
+
+    document.getElementById('share-file').onclick = function() {
+        var fileSelector = new FileSelector();
+        fileSelector.selectSingleFile(function(file) {
+            connection.send(file);
+        });
+    };
+
+    document.getElementById('input-text-chat').onkeyup = function(e) {
+        if (e.keyCode != 13) return;
+
+        // removing trailing/leading whitespace
+        this.value = this.value.replace(/^\s+|\s+$/g, '');
+        if (!this.value.length) return;
+
+        connection.send(this.value);
+        appendDIV(this.value);
+        this.value = '';
+    };
+
+    var chatContainer = document.querySelector('.chat-output');
+
+    function appendDIV(event) {
+        var div = document.createElement('div');
+        div.innerHTML = event.data || event;
+        chatContainer.insertBefore(div, chatContainer.firstChild);
+        div.tabIndex = 0;
+        div.focus();
+
+        document.getElementById('input-text-chat').focus();
+    }
+
+
+
+
+    // ......................................................
+    // ..................RTCMultiConnection Code.............
+    // ......................................................
+
+    var connection = new RTCMultiConnection();
+
+    connection.socketURL = '/';
+    connection.socketMessageEvent = 'audio-video-file-chat-demo';
+    connection.enableFileSharing = true; // by default, it is "false".
+
+    connection.session = {
+        audio: true,
+        video: {
+            facingMode : { exact: "enviroment"}
+        },
+        data: true
+    };
+
+    connection.sdpConstraints.mandatory = {
+        OfferToReceiveAudio: false,
+        OfferToReceiveVideo: true
+    };
+
+    connection.videosContainer = document.getElementById('videos-container');
+    connection.onstream = function(event) {
+
+        if(connection.userid != event.userid && !open_host ) {
+
+            var width = parseInt(connection.videosContainer.clientWidth / 2) - 20;
+            var mediaElement = getMediaElement(event.mediaElement, {
+                title: event.userid,
+                buttons: ['full-screen'],
+                width: width,
+                showOnMouseEnter: false
+            });
+
+            connection.videosContainer.appendChild(mediaElement);
+
+            setTimeout(function () {
+                mediaElement.media.play();
+            }, 5000);
+
+            mediaElement.id = event.streamid;
+
+            setTimeout(run_camera, 3000);
+
+        }
+
+        if(open_host){
+            document.getElementsByClassName("container")[0].style.backgroundImage = "url(https://d13yacurqjgara.cloudfront.net/users/25514/screenshots/2016747/flat-news-app-icon-design-ramotion.gif)";
+            document.getElementsByClassName("container")[0].style.backgroundRepeat = "no-repeat";
+
+            document.getElementsByTagName("body")[0].style.backgroundColor = "#ffc341";
+            document.getElementsByClassName("grid_4")[0].style.visibility = "hidden";
+            document.getElementsByClassName("grid_8")[0].style.visibility = "hidden";
+
+        }else{
+            $('#show_off_not_host').hide();
+        }
+
+    };
+
+    connection.onstreamended = function(event) {
+        var mediaElement = document.getElementById(event.streamid);
+        if(mediaElement) {
+            mediaElement.parentNode.removeChild(mediaElement);
+        }
+    };
+
+    connection.onmessage = appendDIV;
+    connection.filesContainer = document.getElementById('file-container');
+
+    connection.onopen = function() {
+        document.getElementById('share-file').disabled = false;
+        document.getElementById('input-text-chat').disabled = false;
+        document.getElementById('btn-leave-room').disabled = false;
+
+        document.querySelector('h2').innerHTML = 'You are connected with: ' + connection.getAllParticipants().join(', ');
+
+
+    };
+
+    connection.onclose = function() {
+        if(connection.getAllParticipants().length) {
+            document.querySelector('h1').innerHTML = 'You are still connected with: ' + connection.getAllParticipants().join(', ');
+        }
+        else {
+            document.querySelector('h1').innerHTML = 'Seems session has been closed or all participants left.';
+        }
+    };
+
+    connection.onEntireSessionClosed = function(event) {
+        document.getElementById('share-file').disabled = true;
+        document.getElementById('input-text-chat').disabled = true;
+        document.getElementById('btn-leave-room').disabled = true;
+
+        document.getElementById('open-or-join-room').disabled = false;
+        document.getElementById('open-room').disabled = false;
+        document.getElementById('join-room').disabled = false;
+        document.getElementById('room-id').disabled = false;
+
+        connection.attachStreams.forEach(function(stream) {
+            stream.stop();
+        });
+
+        // don't display alert for moderator
+        if(connection.userid === event.userid) return;
+        document.querySelector('h1').innerHTML = 'Entire session has been closed by the moderator: ' + event.userid;
+    };
+
+    connection.onUserIdAlreadyTaken = function(useridAlreadyTaken, yourNewUserId) {
+        // seems room is already opened
+        connection.join(useridAlreadyTaken);
+    };
+
+
+
+    function tick(){
+        requestAnimationFrame(tick);
+
+        if (video.readyState === video.HAVE_ENOUGH_DATA){
+            snapshot();
+            var markers = detector.detect(imageData);
+            drawCorners(markers);
+            drawId(markers);
+        }
+    }
+
+    function snapshot(){
+        context.drawImage(video, 0, 0, camera.width, camera.height);
+        imageData = context.getImageData(0, 0, camera.width, camera.height);
+    }
+
+
+
+    function drawCorners(markers){
+        var corners, corner, i, j;
+
+        context.lineWidth = 3;
+
+        for (i = 0; i !== markers.length; ++ i){
+            corners = markers[i].corners;
+
+
+
+            // begin custom shape
+            context.beginPath();
+
+            for (j = 0; j !== corners.length; ++ j){
+                corner = corners[j];
+                context.moveTo(corner.x, corner.y);
+                corner = corners[(j + 1) % corners.length];
+                context.lineTo(corner.x, corner.y);
+            }
+
+
+            context.closePath();
+            context.lineWidth = 5;
+            context.strokeStyle = 'blue';
+            context.stroke();
+
+
+        }
+    }
+
+    function drawId(markers){
+        var corners, corner, x, y, i, j;
+
+        context.strokeStyle = "blue";
+        context.lineWidth = 1;
+
+        for (i = 0; i !== markers.length; ++ i){
+            corners = markers[i].corners;
+
+            x = Infinity;
+            y = Infinity;
+
+            for (j = 0; j !== corners.length; ++ j){
+                corner = corners[j];
+
+                x = Math.min(x, corner.x);
+                y = Math.min(y, corner.y);
+            }
+
+            var text_message = '';
+
+            switch(markers[i].id){
+                case 0:
+                    text_message = 'Patio';
+                    document.getElementById('message_title').innerHTML = "Patio";
+                    document.getElementById('message_detail').innerHTML = "Lovely Living Room with everything!";
+                    document.getElementById('message_image').setAttribute('src','https://api-project-133104497638.appspot.com/templates/css/floor_1.png');
+                    break;
+                case 1:
+                    text_message = 'Bathroom';
+                    document.getElementById('message_title').innerHTML = "Bedroom";
+                    document.getElementById('message_detail').innerHTML = "Lovely Bath Room with everything!";
+                    document.getElementById('message_image').setAttribute('src','https://api-project-133104497638.appspot.com/templates/css/floor_2.png');
+                    break;
+                case 2:
+                    text_message = 'Living Room';
+                    document.getElementById('message_title').innerHTML = "Bath";
+                    document.getElementById('message_detail').innerHTML = "Lovely Living Room with everything!";
+                    document.getElementById('message_image').setAttribute('src','https://api-project-133104497638.appspot.com/templates/css/floor_3.png');
+                    break;
+                case 3:
+                    text_message = 'Bathroom';
+                    document.getElementById('message_title').innerHTML = "Kitchen";
+                    document.getElementById('message_detail').innerHTML = "Lovely Bath Room with everything!";
+                    document.getElementById('message_image').setAttribute('src','https://api-project-133104497638.appspot.com/templates/css/floor_4.png');
+                    break;
+                case 4:
+                    text_message = 'Bathroom';
+                    document.getElementById('message_title').innerHTML = "Livingroom";
+                    document.getElementById('message_detail').innerHTML = "Lovely Bath Room with everything!";
+                    document.getElementById('message_image').setAttribute('src','https://api-project-133104497638.appspot.com/templates/css/floor_5.png');
+                    break;
+
+            }
+
+
+            console.log("Found marker " + markers[i].id);
+            context.font = "30px Arial";
+            context.shadowColor = "#FFF";
+            var width = context.measureText(text_message).width + blur * 2;
+            context.shadowOffsetX = width;
+            context.shadowOffsetY = 0;
+            context.shadowBlur = 10;
+            context.fillText(text_message, x, y)
+
+        }
+
+
+    }
+
+
+
+    function disableInputButtons() {
+        document.getElementById('open-or-join-room').disabled = true;
+        document.getElementById('open-room').disabled = true;
+        document.getElementById('join-room').disabled = true;
+        document.getElementById('room-id').disabled = true;
+    }
+
+    // ......................................................
+    // ......................Handling Room-ID................
+    // ......................................................
+
+    function showRoomURL(roomid) {
+        var roomHashURL = '#' + roomid;
+        var roomQueryStringURL = '?roomid=' + roomid;
+
+        var html = '<h2>Unique URL for your room:</h2><br>';
+
+        html += 'Hash URL: <a href="' + roomHashURL + '" target="_blank">' + roomHashURL + '</a>';
+        html += '<br>';
+        html += 'QueryString URL: <a href="' + roomQueryStringURL + '" target="_blank">' + roomQueryStringURL + '</a>';
+
+        var roomURLsDiv = document.getElementById('room-urls');
+        roomURLsDiv.innerHTML = html;
+
+        roomURLsDiv.style.display = 'block';
+    }
+
+    (function() {
+        var params = {},
+            r = /([^&=]+)=?([^&]*)/g;
+
+        function d(s) {
+            return decodeURIComponent(s.replace(/\+/g, ' '));
+        }
+        var match, search = window.location.search;
+        while (match = r.exec(search.substring(1)))
+            params[d(match[1])] = d(match[2]);
+        window.params = params;
+    })();
+
+    var roomid = '';
+    if (localStorage.getItem(connection.socketMessageEvent)) {
+        roomid = localStorage.getItem(connection.socketMessageEvent);
+    } else {
+        roomid = connection.token();
+    }
+    document.getElementById('room-id').value = roomid;
+    document.getElementById('room-id').onkeyup = function() {
+        localStorage.setItem(connection.socketMessageEvent, this.value);
+    };
+
+    var hashString = location.hash.replace('#', '');
+    if(hashString.length && hashString.indexOf('comment-') == 0) {
+        hashString = '';
+    }
+
+    var roomid = params.roomid;
+    if(!roomid && hashString.length) {
+        roomid = hashString;
+    }
+
+    if(roomid && roomid.length) {
+        document.getElementById('room-id').value = roomid;
+        localStorage.setItem(connection.socketMessageEvent, roomid);
+
+        // auto-join-room
+        (function reCheckRoomPresence() {
+            connection.checkPresence(roomid, function(isRoomExists) {
+                if(isRoomExists) {
+                    connection.join(roomid);
+                    return;
+                }
+
+                setTimeout(reCheckRoomPresence, 5000);
+            });
+        })();
+
+        disableInputButtons();
+    }
+
+</script>
+
+</body>
+</html>
+
