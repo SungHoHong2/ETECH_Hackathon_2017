@@ -12,6 +12,9 @@ Project Giraffe is a remote control car controlled on web and send streamline vi
  - [article link](https://asunow.asu.edu/20170322-creativity-asu-wide-hackathon-calls-student-innovators-all-backgrounds)
  - [project link](https://devpost.com/software/etech_hackathon_2017)
 
+<br>
+<br>
+
 
 2. Tools used for development
  - Arduinio Yun (Used for developing the RC vehicle)
