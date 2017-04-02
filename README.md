@@ -11,6 +11,8 @@ Project Giraffe is a remote control car controlled on web and send streamline vi
 ## Related links for the project Giraffe 
  - [article link](https://asunow.asu.edu/20170322-creativity-asu-wide-hackathon-calls-student-innovators-all-backgrounds)
  - [project link](https://devpost.com/software/etech_hackathon_2017)
+ - [ppt link](readme/Emerge-Tech-PPt-2017.pdf)
+
 
 <br>
 <br>
