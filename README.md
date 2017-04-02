@@ -2,7 +2,7 @@
 
 ![First Image](readme/1.png)
 
-Project giraffe is remote control car controlled and send streamline video via web-server. This inter-disciplinary project is made among experts pursuing H/W, S/W and art. 
+Project giraffe is a remote control car controlled and used to send streamline video by web-users. This inter-disciplinary project is made among experts pursuing H/W, S/W and art. 
 The project won the first place in Emergen-Tech Hackathon
 
 <br>
