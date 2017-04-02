@@ -17,18 +17,14 @@ Project Giraffe is a remote control car controlled on web and send streamline vi
  - Arduinio Yun (Used for developing the RC vehicle)
  - Google App Engine python (Sending control signals from web to RC vehicle)
  - Node.js with heroku (Sending video streamline from RC vehicle to web)
- - ![First Image](readme/3.png)
- 
+ - Implement image pattern recognizition with javascript
+ - Converting the video image from video to web-canvas
 
-3. Hardware parts of Giraffe 
- - ![First Image](readme/2.png)
- - ![First Image](readme/5.JPG)
- - ![First Image](readme/6.JPG)
-
-4. Software parts of Giraffe 
- - ![First Image](readme/4.png)
- - Implement image pattern recognizition with javascript 
- - Converting the video image from video to web-canvas 
+ ![First Image](readme/3.png)
+ ![First Image](readme/2.png)
+ ![First Image](readme/5.JPG)
+ ![First Image](readme/6.JPG)
+ ![First Image](readme/4.png)
 
 
 
