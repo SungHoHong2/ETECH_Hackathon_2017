@@ -8,7 +8,7 @@ The project won the first place in Emergen-Tech Hackathon
 <br>
 
 Related links for this project are listed below 
- -[article link](https://asunow.asu.edu/20170322-creativity-asu-wide-hackathon-calls-student-innovators-all-backgrounds)
+ - [article link](https://asunow.asu.edu/20170322-creativity-asu-wide-hackathon-calls-student-innovators-all-backgrounds)
  - [project link](https://devpost.com/software/etech_hackathon_2017)
 
 
