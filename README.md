@@ -1,12 +1,11 @@
 # Project Giraffe
 
-![First Image](readme/1.png)
-
 Project Giraffe is a remote control car controlled on web and send streamline videos to web-users. This inter-disciplinary project is made among experts pursuing H/W, S/W and art,
  ultimately winning the first place in Emergen-Tech Hackathon.
 
 <br>
 
+![First Image](readme/1.png)
 ![First Image](readme/winners.jpg)
 ![First Image](readme/winners_2.png)
 
